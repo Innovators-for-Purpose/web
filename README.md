@@ -1,3 +1,3 @@
 # iFp Web Projects
 
-This repository holds web-base projects for Innovators for Purpose.
+This repository holds web-based projects for Innovators for Purpose.

@@ -1,0 +1,67 @@
+html, body {
+  height: 100%;
+  width: 100%;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+dl > div {
+  background: #fff;
+  padding: 24px 0 0 0;
+}
+
+dt {
+  background: #b8c1c8;
+  border-bottom: 1px solid #989ea4;
+  border-top: 1px solid #717d85;
+  color: #fff;
+  font: bold 18px/21px Helvetica, Arial, sans-serif;
+  margin: 0;
+  padding: 2px 0 0 12px;
+  position: -webkit-sticky;
+  position: sticky;
+  top: -1px;
+}
+
+dd {
+  font: bold 20px/45px Helvetica, Arial, sans-serif;
+  margin: 0;
+  padding: 0 0 0 12px;
+  white-space: nowrap;
+}
+
+dd + dd {
+  border-top: 1px solid #ccc;
+}
+
+.scrolling-list {
+  height: 400px;
+  width: 600px;
+  overflow-y: scroll;
+  border: 1px solid black;
+  border-radius: 8px;
+}
+
+.very-tall-div {
+  height: 2000px;
+}
+
+.sticky {
+  width: 100px;
+  float: left;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 20px;
+  visibility: hidden;
+}
+
+.text {
+  margin-left: 20px;
+  overflow: hidden;
+}
+
+.ifplogo {
+  height: 40px;
+}
