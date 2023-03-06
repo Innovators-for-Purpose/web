@@ -1,0 +1,14 @@
+# See documentation on the format of this file here: https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/customizing-your-repository/about-code-owners
+
+# Global owners could be added here. These owners would be the default
+# owners for everything in the repo. Unless a later match takes
+# precedence, @global-owner1 and @global-owner2 would be requested for
+# review when someone opens a pull request.
+# *       @global-owner1 @global-owner2
+
+# Published sites via Github Pages
+/pages/ @frankpinto @lfkellogg
+
+# The experiment directory explicitly has no owners, regardless of any
+# global owners
+/experimental/
