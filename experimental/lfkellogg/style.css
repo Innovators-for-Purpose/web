@@ -65,3 +65,13 @@ dd + dd {
 .ifplogo {
   height: 40px;
 }
+
+.blue-background {
+  color: white;
+  background-color: cornflowerblue;
+}
+
+.green-background {
+  color: white;
+  background-color: darkolivegreen;
+}

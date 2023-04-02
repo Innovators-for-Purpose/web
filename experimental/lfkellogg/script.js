@@ -13,3 +13,39 @@ window.onscroll = function () {
     }
   }
 }
+
+function createComponent(templateId, template) {
+  const templateElement = document.createElement('template');
+  templateElement.setAttribute('id', templateId);
+  templateElement.innerHTML = template;
+  document.body.appendChild(templateElement);
+
+  customElements.define(templateId, class extends HTMLElement {
+    constructor() {
+      super();
+      const template = document.getElementById(templateId);
+      const shadowRoot = this.attachShadow({ mode: "open" });
+      shadowRoot.appendChild(template.content.cloneNode(true));
+
+      // Apply external styles to the shadow DOM
+      const linkElem = document.createElement("link");
+      linkElem.setAttribute("rel", "stylesheet");
+      linkElem.setAttribute("href", "style.css");
+
+      // Attach the created element to the shadow DOM
+      shadowRoot.appendChild(linkElem);
+    }
+  });
+}
+
+createComponent('header-component', `
+  <header class="blue-background">
+    This <b><slot name="page">--</slot></b> page header was created by a template!
+  </header>
+`);
+
+createComponent('footer-component', `
+  <footer class="green-background">
+    This <b><slot name="page">--</slot></b> page footer was created by a template!
+  </footer>
+`);
